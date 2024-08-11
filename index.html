@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Hello VITA </title>
+
+  <link rel="icon" style="height: 120px; width: 150px;" href="./static/images/vita.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/my-text-align.css">
+
+  <!-- <link href="https://unpkg.com/tabulator-tables@5.5.2/dist/css/tabulator_bulma.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.2/dist/js/tabulator.min.js"></script> -->
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/explorer-index.js"></script> 
+  
+
+  <style>
+    .no-sort {
+      cursor: default;
+      pointer-events: none;
+      background-image: none !important;
+      /* Remove the sort arrow */
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <p style="font-size:18px; display: inline; margin-right: -2px; margin-top: 12px;">🔥</p>
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models">
+              <b>MME</b>
+            </a>
+            <a class="navbar-item" href="https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models">
+              <b>Awesome-MLLM</b>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav> -->
+
+
+  <section class="hero" style="height: 250px;">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title is-bold">
+              <!-- <img src="static/images/vita.png" style="width:1.6em;vertical-align: middle" alt="Logo" /> -->
+              <span class="vita" style="vertical-align: middle">Hello
+                VITA</span>
+            </h1>
+            <h2 class="subtitle is-3 publication-subtitle" , style="margin: 0;">  
+			  We are announcing VITA, the first-ever open-source Multimodal LLM<br> that can process Video, Image, Text, and Audio, and meanwhile <br>has an advanced multimodal interactive experience.
+
+            </h2> 
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="column has-text-centered" style="height: 120px;">
+    <div class="publication-links">
+      <!-- PDF Link. -->
+      <span class="link-block">
+        <a href="https://github.com/VITA-MLLM/VITA" class="external-link button is-normal is-rounded is-white">
+          <!-- <a href="https://lupantech.github.io/papers/arxiv23_mathvista.pdf"
+         class="external-link button is-normal is-rounded is-dark"> -->
+      
+          <span style="font-size: 1rem;"> arXiv</span>
+        </a>
+      </span>
+      <!-- Code Link. -->
+      <span class="link-block">
+        <a href="https://github.com/VITA-MLLM/VITA"
+          class="external-link button is-normal is-rounded is-white">
+          <span style="font-size: 1rem;">Code</span>
+        </a>
+      </span>
+      <span class="link-block">
+        <a href="https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models"
+          class="external-link button is-normal is-rounded is-white">
+          <span style="font-size: 1rem;">VITA Team</span>
+        </a>
+      </span>
+    </div>
+  </div>
+  
+  
+   
+  
+
+ 
+  <div class="text-center-custom" style="text-align: center; color: darkgray; margin-bottom: 30px;" >
+	  <p style=" font-size: 1.25rem;"> All videos on this page are at 1x real time.</p>
+  </div>  
+ 
+
+  <body class="body">
+    <div class="container">
+      <video src="./static/videos/vita.mp4" controls style="display: block; margin: 0 auto; max-width: 900px;"></video>
+    </div>
+  </body>
+
+
+
+
+  
+
+  <!-- <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="content has-text-justified">
+            GPT-4o (“o” for “omni”) is a step towards much more natural human-computer interaction—it accepts as input
+            any combination of text, audio, image, and video and generates any combination of text, audio, and image
+            outputs. It can respond to audio inputs in as little as 232 milliseconds, with an average of 320
+            milliseconds, which is similar to human response time(opens in a new window) in a conversation. It matches
+            GPT-4 Turbo performance on text in English and code, with significant improvement on text in non-English
+            languages, while also being much faster and 50% cheaper in the API. GPT-4o is especially better at vision
+            and audio understanding compared to existing models.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  
+  <section class="section" >
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths" style="width: 100%;">
+          <h2 class="title is-3 publication-subtitle" style="margin-top: 60px; margin-bottom: 30px;">More Examples</h2>
+          <div class="content has-text-justified" style="text-align: center;">
+  
+            <div id="results-carousel" class="carousel results-carousel" style="text-align: center;">
+
+              <div class="content has-text-centered" style="text-align: center;">
+					<video src="./static/videos/videos1.mp4" controls style=" text-align: center; max-width: 25%; " ></video>
+                  
+                
+              </div>
+			  <div class="content has-text-centered" style="text-align: center;">
+			  		<video src="./static/videos/videos2.mp4" controls style=" text-align: center; max-width: 25%;" ></video>
+			      
+			    
+			  </div>
+			  <div class="content has-text-centered" style="text-align: center;">
+					<video src="./static/videos/videos3.mp4" controls style=" text-align: center; max-width: 25%;" ></video>
+			      
+			    
+			  </div>
+   
+  
+            </div>
+  
+  
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    </div>
+  
+     
+  
+  <!-- </section>
+  
+  <section class="section">
+    <div class="columns is-centered">
+		<h2 class="title is-3 publication-subtitle">Introduction</h2> 
+    </div> 
+  	<div class="slider-container">
+  		  <div class="slider"  >
+  			  <div class="slider-inner slider-inner-2"> 
+  				  <div class="slide slide-2">
+  					  <div class="slide-content">
+  						  <div class="content has-text-centered">
+  						    <video src="./static/videos/Ty.mp4" controls style="width: 95%;"></video>
+  						    <p style="margin-bottom: 30px;">🔗 Full Video Link:&nbsp;&nbsp;<a
+  						        href="https://www.youtube.com/watch?v=VFntoBRGF1A">https://www.youtube.com/watch?v=VFntoBRGF1A</a>
+  						    </p> 
+  						  </div>
+  						   
+  					  </div>
+					  
+  				  </div>
+				  
+				  <div class="slide slide-2">
+					  <div class="slide-content">
+						  <div class="content has-text-centered">
+							<video src="./static/videos/Aj.mp4" controls style="width: 95%;"></video>
+							<p style="margin-bottom: 30px;">🔗 Full Video Link:&nbsp;&nbsp;<a
+								href="https://www.youtube.com/watch?v=VFntoBRGF1A">https://www.youtube.com/watch?v=VFntoBRGF1A</a>
+							</p> 
+						  </div>
+						   
+					  </div>
+				  					  
+				  </div>
+  			  </div>
+  			  <div class="nav-buttons">
+  				  <button class="nav-button" onclick="slideLeft()">&#10094;</button>
+  				  <button class="nav-button" onclick="slideRight()">&#10095;</button>
+  			  </div>
+  		  </div>
+  	</div>
+           
+  </section> -->
+
+ 
+
+
+  <!-- <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="content has-text-justified">
+            GPT-4o (“o” for “omni”) is a step towards much more natural human-computer interaction—it accepts as input
+            any combination of text, audio, image, and video and generates any combination of text, audio, and image
+            outputs. It can respond to audio inputs in as little as 232 milliseconds, with an average of 320
+            milliseconds, which is similar to human response time(opens in a new window) in a conversation. It matches
+            GPT-4 Turbo performance on text in English and code, with significant improvement on text in non-English
+            languages, while also being much faster and 50% cheaper in the API. GPT-4o is especially better at vision
+            and audio understanding compared to existing models.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  
+  
+  <section class="section">  
+	<div class="columns is-centered">
+		<h2 class="title is-3 publication-subtitle">Multimodal Foundation Capabilities</h2> 
+	</div>  
+	<div class="my-slider-container">
+		  <div class="my-slider"  >
+			  <div class="my-slider-inner my-slider-inner-1">
+				  <div class="my-slide my-slide-1">
+					  <div class="my-slide-content">
+						  <h3>High-Resolution Perception:</h3>
+						  <div class="input-box">
+							  <p style="text-align: center;">田林地道该怎么走？有什么注意事项吗？</p>
+							  <!-- <div style="text-align: center;">
+								  <audio controls>
+									  <source src="./static/audios/00045.wav" type="audio/wav">
+									  您的浏览器不支持音频元素。
+								  </audio>
+							  </div> -->
+							  <div style="text-align: center;">
+								  <img src="./static/images/case1.png" alt="Input Image" style="max-width: 530px;" >
+							  </div>
+						  </div>
+						  <h3>VITA:</h3>
+						  <div class="output-box">
+							  <p>你需要右转，并且注意有潮汐车道。</p>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="my-slide my-slide-1">
+				  		<div class="my-slide-content">
+						  <h3>Dese OCR:</h3>
+						  <div class="input-box">
+							  <p style="text-align: center;">预防措施有哪些？</p>
+							  <div style="text-align: center;">
+								  <img src="./static/images/case2.jpg" alt="Input Image" style="max-width:300px; height:auto; margin-top:10px;">
+								  
+							  </div>
+						  </div>
+						  <h3>VITA:</h3>
+						  <div class="output-box">
+							  <p>远离热源、火花、明火、热表面。禁止吸烟。避免往明火或其他火源上喷射。压力容器:禁止戳穿或烧毁，即使在使用后。应在通风环境下使用。处理电器前，应把电源关闭。</p>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="my-slide my-slide-1">
+				  					  <div class="my-slide-content">
+				  						  <h3>Math:</h3>
+				  						  <div class="input-box">
+				  							  <p style="text-align: center;">请帮我求解这个问题。</p> 
+				  							  <div style="text-align: center;">
+				  								  <img src="./static/images/case3.jpg" alt="Input Image" style="max-width:300px; height:auto; margin-top:10px;">
+				  							  </div>
+				  						  </div>
+				  						  <h3>VITA:</h3>
+				  						  <div class="output-box">
+				  							  <p>这张图片展示了一张手写的数学问题。具体内容如下：
+														<br>1.  题目：
+														[y = \sin x + e^{ix}]
+														<br>2.  条件：
+														[x = \pi]
+														<br>3.  问题：
+														[y = ?]
+														<br>###  解题过程：
+														<br>1.  首先，我们需要计算 ( \sin x ) 和 ( e^{ix} ) 在 ( x = \pi ) 时的值。
+														<br>2.  对于 ( \sin x )，当 ( x = \pi ) 时，( \sin \pi = 0 )。
+														<br>3.  对于 ( e^{ix} )，我们需要使用欧拉公式 ( e^{ix} = \cos x + i \sin x )。
+														- 当 ( x = \pi ) 时，( \cos \pi = -1 )，( \sin \pi = 0 )。
+														- 因此，( e^{i\pi} = -1 + i \cdot 0 = -1 )。
+														<br>4.  所以，当 ( x = \pi ) 时，( y = \sin x + e^{ix} = 0 + (-1) = -1 )。
+														<br>###  答案：
+														<br>[y = -1]</p>
+				  						  </div>
+				  					  </div>
+				  </div>
+				  <div class="my-slide my-slide-1">
+				  					  <div class="my-slide-content">
+				  						  <h3>Coding:</h3>
+				  						  <div class="input-box">
+				  							  <p style="text-align: center;">Can you translate this into Python code?</p> 
+				  							  <div style="text-align: center;">
+				  								  <img src="./static/images/case4.png" alt="Input Image" style="max-width:300px; size: 80%; height:270px; margin-top:10px;">
+				  							  </div>
+				  						  </div>
+				  						  <h3>VITA:</h3>
+				  						  <div class="output-box">
+				  							  <div style="text-align: center;">
+													<img src="./static/images/case41.png" alt="Input Image" style="max-width:300px; height:280px; margin-top:10px;">
+				  							  </div>
+				  						  </div>
+				  					  </div>
+				  </div>
+				  <div class="my-slide my-slide-1">
+				  					  <div class="my-slide-content">
+				  						  <h3>Reasoning:</h3>
+				  						  <div class="input-box">
+				  							  <p style="text-align: center;">我可以在这条路上骑自行车吗？为什么？</p> 
+				  							  <div style="text-align: center;">
+				  								  <img src="./static/images/case5.png" alt="Input Image" style="max-width:300px; height:auto; margin-top:10px;">
+				  							  </div>
+				  						  </div>
+				  						  <h3>VITA:</h3>
+				  						  <div class="output-box">
+				  							  <p>是的，你可以在这条路上骑自行车。在图片中，有一个“禁止进入”的标志，但下面有一个例外，允许自行车和紧急车辆进入。这表明这条街道对自行车是开放的，并且可能是一个指定的自行车道或自行车友好的区域。</p>
+				  						  </div>
+				  					  </div>
+				  </div>
+				  <div class="my-slide my-slide-1">
+				  					  <div class="my-slide-content">
+				  						  <h3>Reasoning with Calculation:</h3>
+				  						  <div class="input-box">
+				  							  <p style="text-align: center;">How many calories are there in 5 slices of this?</p>
+				  							   
+				  							  <div style="text-align: center;">
+				  								  <img src="./static/images/case6.png" alt="Input Image" style="max-width:300px; height:auto; margin-top:10px;">
+				  							  </div>
+				  						  </div>
+				  						  <h3>VITA:</h3>
+				  						  <div class="output-box">
+				  							  <p>There are 60 calories per serving, and each serving is 3 slices. So, 5 slices would be 60 calories / 3 slices = 20 calories per slice. Therefore, 5 slices would be 20 calories/slice x 5 slices = 100 calories.</p>
+				  						  </div>
+				  					  </div>
+				  </div>
+				  <div class="my-slide my-slide-1">
+				  					  <div class="my-slide-content">
+				  						  <h3>Video:</h3>
+				  						  <div class="input-box">
+				  							  <p style="text-align: center;">Please describe this video.</p>
+				  							   
+				  							  <div style="text-align: center;">
+				  								  <video src="./static/videos/case7.mp4" controls id="au-video" style="max-width:300px; height:320px; margin-top:10px;"></video>
+				  							  </div>
+				  						  </div>
+				  						  <h3>VITA:</h3>
+				  						  <div class="output-box">
+				  							  <p>The video begins with a nighttime scene of a street lined with buildings. Red and white fireworks explode in the sky above the buildings. The camera pans slightly to the right, following the trajectory of the fireworks. As the fireworks continue, the camera moves again, now focusing on a different section of the street with a different building. The fireworks continue to explode in the sky.
+In summary, the video shows a nighttime street scene with fireworks exploding in the sky. The camera moves to follow the fireworks, showcasing different sections of the street.
+</p>
+				  						  </div>
+				  					  </div>
+				  </div>
+				  <div class="my-slide my-slide-1">
+				  					  <div class="my-slide-content">
+				  				  						  <h3>Video:</h3>
+				  				  						  <div class="input-box">
+				  				  							  <p style="text-align: center;">What is the gorilla doing? Please give a detailed description.</p>
+				  				  							   
+				  				  							  <div style="text-align: center;">
+				  				  								  <video src="./static/videos/case8.mp4" controls id="au-video" style="max-width:360px; height:360px; margin-top:10px;"></video>
+				  				  							  </div>
+				  				  						  </div>
+				  				  						  <h3>VITA:</h3>
+				  				  						  <div class="output-box">
+				  				  							  <p>The gorilla is hanging from a wooden structure, swinging back and forth.</p>
+				  				  						  </div>
+				  				  					  </div>
+				  </div>
+				  <div class="my-slide my-slide-1">
+				  					  <div class="my-slide-content">
+				  				  						  <h3>Video:</h3>
+				  				  						  <div class="input-box">
+				  				  							  <p style="text-align: center;">Please describe the dog's movements in detail.</p>
+				  				  							   
+				  				  							  <div style="text-align: center;">
+				  				  								  <video src="./static/videos/case9.mp4" controls id="au-video" style="max-width:300px; height:350px; margin-top:10px;"></video>
+				  				  							  </div>
+				  				  						  </div>
+				  				  						  <h3>VITA:</h3>
+				  				  						  <div class="output-box">
+				  				  							  <p>The dog is standing on its hind legs, with its front paws resting on the bars of a white metal gate. It is looking directly at the camera. The dog then lowers itself to all fours and walks away from the gate.</p>
+				  				  						  </div>
+				  				  					  </div>
+				  </div>
+				  
+			  </div>
+			  <div class="nav-buttons">
+			  					  <button class="nav-button" onclick="slideLeft_1()">&#10094;</button>
+			  					  <button class="nav-button" onclick="slideRight_1()">&#10095;</button>
+			  </div>
+			  
+		  </div>
+	</div>
+           
+  </section>
+  
+  <script>
+          const audio = document.getElementById('my-audio');
+          const video = document.getElementById('au-video');
+  
+          // 当音频播放时，自动播放视频
+          audio.addEventListener('play', function() {
+              video.play();
+          });
+  
+          // 当音频暂停时，自动暂停视频
+  //         audio.addEventListener('pause', function() {
+  //             video.pause();
+  //         });
+  
+          // 当音频结束时，自动暂停视频
+          // audio.addEventListener('ended', function() {
+          //     video.pause();
+          // });
+  
+          // 同步音频和视频的进度
+          audio.addEventListener('timeupdate', function() {
+              video.currentTime = audio.currentTime;
+          });
+      </script>
+  
+  
+  
+  
+  <script>
+	  let currentIndex = 0;
+  
+	  function slideLeft() {
+		  if (currentIndex > 0) {
+			  currentIndex--;
+			  document.querySelector('.slider-inner-2').style.transform = `translateX(-${currentIndex * 100}%)`;
+		  }
+	  }
+	  
+	  function slideLeft_1() {
+	  		  if (currentIndex > 0) {
+	  			  currentIndex--;
+	  			  document.querySelector('.my-slider-inner-1').style.transform = `translateX(-${currentIndex * 100}%)`;
+	  		  }
+	  }
+  
+	  function slideRight() {
+		  if (currentIndex < document.querySelectorAll('.slide-2').length - 1) {
+			  currentIndex++;
+			  document.querySelector('.slider-inner-2').style.transform = `translateX(-${currentIndex * 100}%)`;
+		  }
+	  }
+	  
+	  function slideRight_1() {
+	  		  if (currentIndex < document.querySelectorAll('.my-slide-1').length - 1) {
+	  			  currentIndex++;
+	  			  document.querySelector('.my-slider-inner-1').style.transform = `translateX(-${currentIndex * 100}%)`;
+	  		  }
+	  }
+  </script>
+  
+  <style>
+	  .my-slider-container {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  margin-top: 20px;
+	  }
+  
+	  .my-slider {
+		  width: 100%;
+		  max-width: 800px;
+		  overflow: hidden;
+		  position: relative;
+		  border: 1px solid #ddd;
+		  border-radius: 8px;
+		  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+		  background-color: #f9f9f9;
+	  }
+  
+	  .my-slider-inner {
+		  display: flex;
+		  transition: transform 0.5s ease;
+	  }
+  
+	  .my-slide {
+		  min-width: 100%;
+		  box-sizing: border-box;
+		  padding: 20px;
+	  }
+  
+	  .my-slide-content {
+		  max-width: 800px;
+		  margin: 0 auto;
+	  }
+  
+	  .input-box, .output-box {
+		  background-color: #ffffff;
+		  border-radius: 8px;
+		  padding: 15px;
+		  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+		  margin-bottom: 15px;
+	  }
+  
+	  .input-box p, .output-box p {
+		  margin: 0;
+	  }
+  
+	  .nav-buttons {
+		  position: absolute;
+		  top: 50%;
+		  transform: translateY(-50%);
+		  width: 100%;
+		  display: flex;
+		  justify-content: space-between;
+	  }
+  
+	  .nav-button {
+		  background: rgba(0, 0, 0, 0.5);
+		  color: white;
+		  border: none;
+		  padding: 10px;
+		  cursor: pointer;
+		  border-radius: 50%;
+		  outline: none;
+	  }
+  
+	  .nav-button:focus {
+		  outline: none;
+	  }
+  </style> 
+  
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+		<div class="columns is-centered" style="height: 80px;">
+			<h2 class="title is-3 publication-subtitle">VITA Overview</h2> 
+		</div> 
+        <div class="columns is-centered">
+          <div class="content has-text-justified">
+            <p >
+              The remarkable multimodal capabilities and interactive experience of GPT-4o underscore their necessity in practical applications, yet open-source models rarely excel in both areas. In this paper, we introduce <strong>VITA</strong>, the first-ever open-source Multimodal Large Language Model (MLLM) adept at simultaneous processing and analysis of <strong>V</strong>ideo, <strong>I</strong>mage, <strong>T</strong>ext, and <strong>A</strong>udio modalities, and meanwhile has an advanced multimodal interactive experience. Our work distinguishes from existing open-source MLLM through <strong>three key features</strong>:
+            
+              <br><br><strong>  Omni Multimodal Understanding</strong>: VITA demonstrates robust foundational capabilities of multilingual, vision, and audio understanding, as evidenced by its strong performance across a range of both unimodal and multimodal benchmarks.
+              <br><br><strong>  Non-awakening Interaction</strong>: VITA can be activated and respond to user audio questions in the environment without the need for a wake-up word or button.
+              <br><br><strong>  Audio interrupt Interaction</strong>: VITA is able to simultaneously track and filter external queries in real-time. This allows users to interrupt the model's generation at any time with new questions, and VITA will respond to the new query accordingly.
+            </p>
+          </div> 
+        </div>
+		<img src="./static/images/git1.png" alt="data-composition" style="text-align: center; margin-top: 50px; margin-bottom: 50px;" /> 
+		<div class="columns is-centered">
+		  <div class="content has-text-justified">
+				<p >
+				  VITA is capable of processing inputs in the form of pure text/audio, as well as video/image combined with text/audio. Besides, two key techniques are adopted to advance the multimodal interactive experience:
+				  
+				  <br><br><strong>  State token. </strong>: We set different state tokens for different query inputs. <1> corresponds to the effective query audio, such as “what is the biggest animal in the world?”, for which we expect a response from the model. <2> corresponds to the noisy audio, such as someone in the environment calls me to eat, for which we expect the model not to reply. <3> corresponds to the query text, i.e., the question given by the user in text form. During the training phase, we try to teach the model to automatically distinguish different input queries. During the deployment phase, with <2> we can implement non-awakening interaction.
+				  <br><br><strong>  Duplex scheme. </strong>: We further introduce a duplex scheme for the audio interrupt interaction. Two models are running at the same time, where the generation model is responsible for handling user queries. When the generation model starts working, the other model monitors the environment. If the user interrupts with another effective audio query, the monitoring model aggregates the historical context to respond to the latest query, while the generation model is paused and tune to monitor, i.e., the two models swap identities.
+				</p>
+		  </div>		   
+		</div> 
+		<img src="./static/images/git2.png" alt="data-composition" style="text-align: center; margin-top: 50px; margin-bottom: 50px;" /> 
+	  </div>
+	  
+    </div>
+  </section>
+  
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+  		<div class="columns is-centered" style="height: 80px;">
+  			<h2 class="title is-3 publication-subtitle">Experimental Results</h2> 
+  		</div> 
+        <div class="columns is-centered" >
+          <div class="content has-text-justified">
+            <p >
+              <strong>  Comparison of official Mixtral 8x7B Instruct and our trained Mixtral 8x7B.</strong></p>
+          </div> 
+        </div>
+  		<img src="./static/images/git3.png" alt="data-composition" style="text-align: center; margin-top: 10px; margin-bottom: 10px;" /> 
+  		<div class="columns is-centered" style="height: 80px;" >
+  		  <div class="content has-text-justified">
+  				<p > <br><br><strong>  Evaluation on ASR tasks. </strong></p>
+  		  </div>		   
+  		</div> 
+  		<img src="./static/images/git4.png" alt="data-composition" style="text-align: center; margin-top: 10px; margin-bottom: 10px;" /> 
+		<div class="columns is-centered" style="height: 80px;" >
+			  <div class="content has-text-justified">
+					<p > <br><br><strong>  Evaluation on image and video understanding. </strong></p>
+			  </div>		   
+		</div> 
+		<img src="./static/images/git5.png" alt="data-composition" style="text-align: center; margin-top: 10px; margin-bottom: 10px;" /> 
+	  </div>
+  	  
+    </div>
+  </section>
+ 
+
+
+
+
+  <!-- <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <h2 class="title is-3" style="margin-top: 30px;">Benchmark Statistics</h2> -->
+
+  <!-- bing tu -->
+  <!-- <div class="container-wrapper">
+            <div id="container"></div>
+            <div id="image-container">
+              <img src="static/images/data_sta_2.png" alt="data-composition"
+                style="max-width: 60%; display: inline-block; margin-right: 200px;" />
+            </div>
+          </div>
+          <script type="text/javascript"
+            src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/echarts.min.js"></script>
+          <script type="text/javascript" src="static/js/bingtu.js"></script>
+
+          <p style="text-align: center; margin-left: auto; margin-right: auto; width: 50%;">
+            (Left) <strong>Video Categorie Hierarchy</strong>: Video-MME consists of 6 key domains and 30 subcategories
+            of video types. <br> (Right) <strong>Video Duration and Task Type Distributions</strong>: Video-MME spans a
+            full spectrum of video lengths and assesses various core abilities of MLLMs.<br />
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <h2 class="title is-3">Benchmark Comparison</h2>
+          <img src="static/images/dataset_cl.jpg" alt="data-composition" style="max-width: 30%;" />
+          <p style="text-align: center; margin-left: auto; margin-right: auto; width: 50%;">
+            Analysis of Certificate Length in seconds. Avg. V.L.: average video length, Med. C.L.: median certificate
+            length, Avg. C.L.: average certificate length.
+          </p>
+
+          <img src="static/images/dataset_comparison.png" alt="data-composition" style="max-width: 50%;" />
+          <p style="text-align: center; margin-left: auto; margin-right: auto; width: 50%;">
+            The comparison of various benchmarks encompasses several key aspects:
+            the total number of videos, the number of clips, the average duration of the videos, the method of video
+            annotation (manual denoted as M, automated as A),
+            the average number of QA pair tokens, the average number of subtitle tokens, whether the videos cover
+            multiple duration levels,
+            whether the videos are sourced from a broad range of open domains, and whether provide subtitle together
+            with audio information.
+            It is important to note that if a dataset includes multiple task formats, our comparison focuses solely on
+            the multiple-choice segment.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section> -->
+
+  <!-- RESULTS SECTION -->
+  <!-- <section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-1 mathvista_other">Experiment Results</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+          <h2 class="title is-3">Different Question Types</h2>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/exp_results/results_of_question_types_0616.png" alt="grade-lv" width="50%" />
+              <p>Evaluation results of four representative MLLMs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered m-6">
+        <div class="column is-full has-text-centered content">
+          <h2 class="title is-3">Different Video Duration Types</h2>
+
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/exp_results/results_of_video_types.png" alt="" width="80%" />
+              <p>Evaluation results of Gemini 1.5 Pro.</p>
+            </div>
+          </div>
+
+          <div class="box m-5">
+
+            <div id="results-carousel" class="carousel results-carousel">
+
+              <div class="content has-text-centered">
+                <img src="static/images/exp_results/results_of_video_sub_types-1.jpg" alt="" width="70%" />
+                <p style="margin-bottom: 30px;">(1) Evaluation results of Gemini 1.5 Pro across different video
+                  subcategories.</p>
+              </div>
+
+              <div class="content has-text-centered">
+                <img src="static/images/exp_results/results_of_video_sub_types-2.jpg" alt="" width="70%" />
+                <p style="margin-bottom: 30px;">(2) Evaluation results of Gemini 1.5 Pro across different video
+                  subcategories.</p>
+              </div>
+
+              <div class="content has-text-centered">
+                <img src="static/images/exp_results/results_of_video_sub_types-3.jpg" alt="" width="70%" />
+                <p style="margin-bottom: 30px;">(3) Evaluation results of Gemini 1.5 Pro across different video
+                  subcategories.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  </section>
+  <section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-1 mathvista_other" id="citation">Citation</h1>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <pre><code>@article{fu2024video,
+      title={Video-MME: The First-Ever Comprehensive Evaluation Benchmark of Multi-modal LLMs in Video Analysis},
+      author={Fu, Chaoyou and Dai, Yuhan and Luo, Yondong and Li, Lei and Ren, Shuhuai and Zhang, Renrui and Wang, Zihan and Zhou, Chenyu and Shen, Yunhang and Zhang, Mengdan and others},
+      journal={arXiv preprint arXiv:2405.21075},
+      year={2024}
+    }
+</code></pre>
+    </div>
+  </section>
+ -->
+
+  <!-- <section class="section">
+    <div class="container" style="width: 60%;">
+      <style>
+        pre {
+          background-color: #f4f4f4;
+          padding: 5px;
+          /* 调整padding为5px */
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          overflow-x: auto;
+          /* 允许水平滚动 */
+        } -->
+
+  <!-- code {
+          font-family: Consolas, "Courier New", monospace;
+          color: #d63384;
+          /* 代码文本颜色 */
+        }
+      </style>
+
+
+    </div>
+  </section> -->
+
+
+  <footer class="footer">
+    <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align: center;">
+			This website is adapted from <a href="https://video-mme.github.io/">Video-MME</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+  </footer>
+
+</body>
+
+</html>
