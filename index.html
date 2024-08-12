@@ -537,14 +537,14 @@
                 with text/audio. Besides, two key techniques are adopted to advance the multimodal interactive
                 experience:
 
-                <br><br><strong> State token </strong>. We set different state tokens for different query inputs. <1>
+                <br><br><strong> State Token</strong>. We set different state tokens for different query inputs. <1>
                   corresponds to the effective query audio, such as “what is the biggest animal in the world?”, for
                   which we expect a response from the model. <2> corresponds to the noisy audio, such as someone in the
                     environment calls me to eat, for which we expect the model not to reply. <3> corresponds to the
                       query text, i.e., the question given by the user in text form. During the training phase, we try
                       to teach the model to automatically distinguish different input queries. During the deployment
                       phase, with <2> we can implement non-awakening interaction.
-                        <br><br><strong> Duplex scheme </strong>. We further introduce a duplex scheme for the audio
+                        <br><br><strong> Duplex scheme</strong>. We further introduce a duplex scheme for the audio
                         interrupt interaction. Two models are running at the same time, where the generation model is
                         responsible for handling user queries. When the generation model starts working, the other model
                         monitors the environment. If the user interrupts with another effective audio query, the
@@ -608,12 +608,13 @@
     <section class="section" id="BibTeX">
       <div class="container is-max-desktop content">
 
-        <pre><code>@article{fu2024vita,
-        title={VITA: Towards Open-Source Interactive Omni Multimodal LLM},
-        author={Fu, Chaoyou and Lin, Haojia and Long, Zuwei and Shen, Yunhang and Zhao, Meng and Zhang, Yifan and Wang, Xiong and Yin, Di and Ma, Long and Zheng, Xiawu and He, Ran and Ji, Rongrong and Wu, Yunsheng and Shan, Caifeng and Sun, Xing},
-        journal={arXiv preprint arXiv:2408.05211},
-        year={2024}
-      }
+        <pre><code>
+    @article{fu2024vita,
+      title={VITA: Towards Open-Source Interactive Omni Multimodal LLM},
+      author={Fu, Chaoyou and Lin, Haojia and Long, Zuwei and Shen, Yunhang and Zhao, Meng and Zhang, Yifan and Wang, Xiong and Yin, Di and Ma, Long and Zheng, Xiawu and He, Ran and Ji, Rongrong and Wu, Yunsheng and Shan, Caifeng and Sun, Xing},
+      journal={arXiv preprint arXiv:2408.05211},
+      year={2024}
+    }
 </code></pre>
       </div>
     </section>
